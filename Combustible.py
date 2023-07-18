@@ -1,3 +1,15 @@
+# Realizamos una funcion para limitar la mala digitacion de los valores como negativos o letras por el usuario
+def obtener_numero_positivo(mensaje):
+    while True:
+        try:
+            numero = float(input(mensaje))
+            if numero < 0:
+                print("Error: Por favor, ingrese un número positivo.")
+            else:
+                return numero
+        except ValueError:
+            print("Error: Por favor, ingrese un número válido.")
+
 def main():
     # Primero consultamos los datos al usuario
     kilometros_recorridos = float(input("Ingrese la cantidad de kilómetros recorridos por la motocicleta: "))
